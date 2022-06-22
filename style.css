@@ -1,0 +1,36 @@
+body{
+    height: 100%;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr repeat(3,1.4fr);
+}
+
+.sidebar{
+    grid-column: 1 / 2;
+    grid-row: 1 / 5;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+}
+
+
+
+.header{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    background-color: yellow;
+}
+
+.central-cont{
+    grid-row: 2 / 5;
+    grid-column: 2 / 3;
+    background-color: green;
+}
