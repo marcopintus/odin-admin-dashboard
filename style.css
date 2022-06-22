@@ -1,18 +1,27 @@
-body{
+@import url('https://fonts.googleapis.com/css2?family=Signika');
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+
+html,body{
     height: 100%;
     margin: 0;
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 2fr 4fr;
     grid-template-rows: 1fr repeat(3,1.4fr);
+    font-family: Signika, Roboto, sans-serif;
 }
 
 .sidebar{
     grid-column: 1 / 2;
     grid-row: 1 / 5;
-    background-color: red;
+    background-color: #fb923c;
+    color: #f8fafc;
+    font-size: 24px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    padding: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
 }
 
 ul{
@@ -21,7 +30,50 @@ ul{
     padding:0;
 }
 
+li{
+    margin: 4px;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}
 
+li:hover{
+    background-color: #f8fafc;
+    color: #fb923c;
+    border-radius: 8px;
+}
+
+li:hover .icon{
+    filter: invert(68%) sepia(88%) saturate(1640%) hue-rotate(331deg) brightness(100%) contrast(98%);
+}
+
+.dashboard{
+    display: flex;
+    align-items: center;
+    margin: 16px;
+    font-size: 32px;
+}
+
+#dash-logo{
+    transform: scale(2.7);
+    margin: 20px;
+    padding: 8px;
+}
+
+.icon{
+    filter: invert(100%) sepia(0%) saturate(6388%) hue-rotate(132deg) brightness(96%) contrast(106%);
+    transform: scale(1.8);
+    margin: 20px;
+    padding: 8px;
+}
+
+.actions{
+    margin: 20px;
+}
+
+.services{
+    margin: 20px;
+}
 
 .header{
     grid-column: 2 / 3;
