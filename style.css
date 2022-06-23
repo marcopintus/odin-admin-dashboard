@@ -6,7 +6,7 @@ body{
     margin: 0;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1.5fr repeat(3,1.4fr);
+    grid-template-rows: 1fr repeat(3,1.4fr);
     font-family: Signika, Roboto, sans-serif;
 }
 
@@ -85,9 +85,8 @@ li:hover .icon{
     background-color: #dfe1e2;
     display: grid;
     grid-template-columns: 3fr 1.5fr;
-    grid-template-rows: 80px 150px;
-    padding-top: 20px;
-    
+    grid-template-rows: 80px 80px;
+    padding-top: 20px;  
 }
 
 
@@ -133,14 +132,14 @@ li:hover .icon{
 
 .small-acc-name{
     width: 60%;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 550;
     text-align: center;
 }
 
 .avatar-small{
     width: 20%;
-    transform: scale(0.8);
+    transform: scale(0.76);
     margin-right: 16px;
     border: 3px solid #fb923c;
     border-radius: 64px;
@@ -153,21 +152,16 @@ li:hover .icon{
     display: grid;
     grid-template-columns: 1fr 6fr;
     grid-template-rows: 1fr 1fr;
-    margin: 24px;
+    margin: 0px;
     margin-left: 30px;
 }
-.avatar-container{
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 .avatar{
     grid-column: 1 / 2;
     grid-row: 1 / 3;
     align-self: center;
     justify-self: center;
-    transform: scale(1.4);
+    transform: scale(1.2);
     border: 3px solid #fb923c;
     border-radius: 64px;
     
@@ -176,7 +170,7 @@ li:hover .icon{
 .hello{
     align-self:flex-end;
     justify-self: start;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 400;
     margin-left: 16px;
 }
@@ -184,7 +178,7 @@ li:hover .icon{
 .acc-name{
     align-self: flex-start;
     justify-self: start;
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 500;
     margin-left: 16px;
 }
@@ -201,10 +195,10 @@ li:hover .icon{
 button{
     background-color: #fb923c;
     color: #f8fafc;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 500;
-    width: 30%;
-    height: 30%;
+    width: 25%;
+    height: 35%;
     border-radius: 32px;
     border: none;
 }
@@ -225,9 +219,112 @@ button:active{
 .central-cont{
     grid-row: 2 / 5;
     grid-column: 2 / 3;
-    background-color: #fed7aa;
-    box-shadow: 12px 12px 12px 12px rgba(88, 88, 88, 0.74);
+    background-color: #ffedd5;
+    box-shadow: 12px 12px 12px 12px rgba(88, 88, 88, 0.74) ;
     display: grid;
     grid-template-columns: 2fr 0.8fr;
-    grid-template-rows: 1fr repeat(3,3fr);
+    grid-template-rows: repeat(2, 0.4fr 3fr);
+}
+
+.projects{
+    grid-row: 2 / 5;
+    grid-column: 1 / 2;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    margin: 30px;
+    gap: 40px;
+}
+
+.project{
+    border-left: 8px solid #fb923c;
+    border-top: 2px solid rgba(88, 88, 88, 0.74);
+    border-right: 2px solid rgba(88, 88, 88, 0.74);
+    border-bottom: 2px solid rgba(88, 88, 88, 0.74);
+    border-radius: 8px;
+    background-color: #f8fafc;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    padding: 8px;
+}
+
+.proj-title{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.proj-cont{
+    font-size: 16px;
+    margin-top: 4px;
+}
+
+.prj-icn{
+    margin:0;
+}
+
+.proj-foot{
+    margin-top: 22px;
+    margin-right: 16px;
+    text-align: right;
+}
+
+.cent-title{
+    align-self: flex-end;
+    font-size: 24px;
+    font-weight: 500;
+    padding:16px;
+    padding-bottom: 8px;
+}
+
+.ann-container,
+.trend-container{
+    margin: 16px;
+    background-color: #f8fafc;
+    border-radius: 8px;
+    border: 1px solid rgba(88, 88, 88, 0.74);
+    padding: 24px;
+    padding-top: 12px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.announcement{
+    border-bottom: 1px solid rgba(88, 88, 88, 0.5);
+}
+
+.ann-title{
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+
+.ann-cont{
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.trend-container{
+    padding: 24px;
+}
+
+.trend{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: repeat(2,1fr);
+    font-size: 16px;
+}
+
+.avatar-trend{
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    transform: scale(0.8);
+    border: 3px solid #fb923c;
+    border-radius: 64px;
+    align-self: center;
+    justify-self: center;
+    margin-right: 12px;
+}
+
+.handle{
+    align-self: flex-end;
+    font-weight: 500;
 }
